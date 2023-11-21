@@ -1,0 +1,45 @@
+dn: ou=people,dc=fei,dc=upce
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=group,dc=fei,dc=upce
+objectClass: organizationalUnit
+ou: group
+
+dn: cn=mygroup,ou=group,dc=fei,dc=upce
+objectClass: posixGroup
+cn: mygroup
+gidNumber: 5000
+
+dn: uid=user1,ou=people,dc=fei,dc=upce
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: User One
+sn: One
+uid: user1
+userPassword: password1
+memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
+
+dn: uid=user2,ou=people,dc=fei,dc=upce
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: User Two
+sn: Two
+uid: user2
+userPassword: password2
+memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
+
+dn: uid=user3,ou=people,dc=fei,dc=upce
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: User Three
+sn: Three
+uid: user3
+userPassword: password3
+memberOf: cn=mygroup,ou=group,dc=fei,dc=upce

@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  openldap:
+    image: osixia/openldap:latest
+    command: --copy-service
+    environment:
+      LDAP_ORGANISATION: "Fei.upce"
+      LDAP_DOMAIN: "fei.upce"
+      LDAP_ADMIN_PASSWORD: adminpassword
+    networks:
+      - private-network
+    ports:
+      - "389:389"
+      - "636:636"
+    volumes:
+      - ./init.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: "openldap"
+      PHPLDAPADMIN_HTTPS: "false"
+    networks:
+      - private-network
+    ports:
+      - "8085:80"
+    depends_on:
+      - openldap
+
+networks:
+  private-network:
+    external: true
+    name: private-network
+
+
+#gui
+#addres http://localhost:8085
+#cn=admin,dc=fei,dc=upce
+#adminpassword
