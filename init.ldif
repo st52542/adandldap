@@ -11,35 +11,46 @@ objectClass: posixGroup
 cn: mygroup
 gidNumber: 5000
 
-dn: uid=user1,ou=people,dc=fei,dc=upce
+dn: uid=techSource,ou=people,dc=fei,dc=upce
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
-cn: User One
-sn: One
-uid: user1
-userPassword: password1
+cn: Tech Source
+sn: Source
+uid: techSource
+userPassword: techSource
 memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
 
-dn: uid=user2,ou=people,dc=fei,dc=upce
+dn: uid=techb,ou=people,dc=fei,dc=upce
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
-cn: User Two
-sn: Two
-uid: user2
-userPassword: password2
+cn: Tech B
+sn: B
+uid: techb
+userPassword: techb
 memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
 
-dn: uid=user3,ou=people,dc=fei,dc=upce
+dn: uid=techa,ou=people,dc=fei,dc=upce
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
-cn: User Three
-sn: Three
-uid: user3
-userPassword: password3
+cn: Tech A
+sn: A
+uid: techa
+userPassword: techa
+memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
+
+dn: uid=techIntegrator,ou=people,dc=fei,dc=upce
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Tech Integrator
+sn: Integrator
+uid: techIntegrator
+userPassword: techIntegrator
 memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
