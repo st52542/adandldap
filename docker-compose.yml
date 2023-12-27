@@ -35,6 +35,6 @@ networks:
 
 
 #gui
-#addres http://localhost:8085
+#addres http://localhost:8086
 #cn=admin,dc=fei,dc=upce
 #adminpassword

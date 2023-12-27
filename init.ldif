@@ -6,10 +6,25 @@ dn: ou=group,dc=fei,dc=upce
 objectClass: organizationalUnit
 ou: group
 
-dn: cn=mygroup,ou=group,dc=fei,dc=upce
+dn: cn=source,ou=group,dc=fei,dc=upce
 objectClass: posixGroup
-cn: mygroup
-gidNumber: 5000
+cn: source
+gidNumber: 5001
+
+dn: cn=appB,ou=group,dc=fei,dc=upce
+objectClass: posixGroup
+cn: appB
+gidNumber: 5002
+
+dn: cn=appA,ou=group,dc=fei,dc=upce
+objectClass: posixGroup
+cn: appA
+gidNumber: 5003
+
+dn: cn=integrate,ou=group,dc=fei,dc=upce
+objectClass: posixGroup
+cn: integrate
+gidNumber: 5004
 
 dn: uid=techSource,ou=people,dc=fei,dc=upce
 objectClass: top
@@ -20,7 +35,7 @@ cn: Tech Source
 sn: Source
 uid: techSource
 userPassword: techSource
-memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
+memberOf: cn=source,ou=group,dc=fei,dc=upce
 
 dn: uid=techb,ou=people,dc=fei,dc=upce
 objectClass: top
@@ -31,7 +46,7 @@ cn: Tech B
 sn: B
 uid: techb
 userPassword: techb
-memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
+memberOf: cn=appB,ou=group,dc=fei,dc=upce
 
 dn: uid=techa,ou=people,dc=fei,dc=upce
 objectClass: top
@@ -42,7 +57,7 @@ cn: Tech A
 sn: A
 uid: techa
 userPassword: techa
-memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
+memberOf: cn=appA,ou=group,dc=fei,dc=upce
 
 dn: uid=techIntegrator,ou=people,dc=fei,dc=upce
 objectClass: top
@@ -53,4 +68,4 @@ cn: Tech Integrator
 sn: Integrator
 uid: techIntegrator
 userPassword: techIntegrator
-memberOf: cn=mygroup,ou=group,dc=fei,dc=upce
+memberOf: cn=integrate,ou=group,dc=fei,dc=upce
